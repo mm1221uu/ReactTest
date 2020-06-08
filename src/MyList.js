@@ -22,7 +22,11 @@ class MyList extends Component {
      e.preventDefault();
      
        const { toDoItems, newItem } = this.state;
-
+        if(newItem==''){
+            alert('input is empty')
+            return
+        }
+            
        this.setState({
            toDoItems: [...toDoItems, newItem],
            newItem: ""
